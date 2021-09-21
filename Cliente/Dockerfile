@@ -21,14 +21,15 @@ RUN npm install
 
 #Ejecutamos las consultas por dominio multicasT cuando se corra el contenedor.
 CMD node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local &&\
-node cli.js seba.local
+node cli.js pipo.local &&\
+node cli.js marcos.local &&\
+node cli.js example1.local &&\
+node cli.js example2.local &&\
+node cli.js example3.local &&\
+node cli.js example4.local &&\
+node cli.js example5.local &&\
+node cli.js example6.local &&\
+node cli.js example7.local
 #CMD "node" "for (let setp=0; step<5; setp++){ cli.js seba.local}
 
 #docker build -t cliente .
