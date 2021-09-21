@@ -24,5 +24,6 @@ RUN mix do deps.compile
 
 CMD iex -S mix
 
-
+#docker build -t servidor .
+#docker run --name svcontenedor -it servidor
 

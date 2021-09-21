@@ -1,0 +1,11 @@
+Mdns.Server.start
+
+Mdns.Server.set_ip(:ip)
+    Para ver IP del contenedor :(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id)
+
+Mdns.Server.add_service(%Mdns.Server.Service{
+    domain: "seba.local",
+    data: {172, 17, 0, 4},
+    ttl: 64,
+    type: :a
+})

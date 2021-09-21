@@ -32,6 +32,6 @@ node cli.js seba.local
 #CMD "node" "for (let setp=0; step<5; setp++){ cli.js seba.local}
 
 #docker build -t cliente .
-#docker run --name Clicontenedor --network host -it cliente 
+#docker run --name cliicontenedor -it cliente 
 
 
