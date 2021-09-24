@@ -1,74 +1,75 @@
 Mdns.Server.start
 
-Mdns.Server.set_ip({172, 17, 0, 2})
+Mdns.Server.set_ip(:ip)
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "seba.local",
-    data: {172, 17, 0, 4},
+    data: {172, 18, 0, 6},
     ttl: 64,
     type: :a
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
-    domain: "pipo.local",
-    data: {172, 17, 0, 5},
-    ttl: 120,
-    type: :a
+    domain: "felipe.local",
+    data: ["id=123123", "text=holamundo"],
+    ttl: 64,
+    type: :txt
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "marcos.local",
-    data: {172, 17, 0, 6},
-    ttl: 44,
-    type: :a
+    data: "_rosetta._tcp.local",
+    ttl: 64,
+    type: :ptr
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example1.local",
-    data: {172, 17, 0, 7},
-    ttl: 64,
+    data: {172, 18, 0, 9},
+    ttl: 128,
     type: :a
 })
+
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example2.local",
-    data: {172, 17, 0, 8},
-    ttl: 120,
-    type: :a
+    data: ["id=123124", "text=holamundo2"],
+    ttl: 128,
+    type: :txt
 })
-
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example3.local",
-    data: {172, 17, 0, 9},
-    ttl: 64,
-    type: :a
+    data: "_pipo1._tcp.local",
+    ttl: 128,
+    type: :ptr
 })
+
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example4.local",
-    data: {172, 17, 0, 10},
-    ttl: 64,
+    data: {172, 18, 0, 10},
+    ttl: 255,
     type: :a
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example5.local",
-    data: {172, 17, 0, 11},
-    ttl: 300,
-    type: :a
+    data: ["id=123125", "text=holamundo3"],
+    ttl: 255,
+    type: :txt
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example6.local",
-    data: {172, 17, 0, 12},
-    ttl: 213,
-    type: :a
+    data: "_pipo2._tcp.local",
+    ttl: 255,
+    type: :ptr
 })
 
 Mdns.Server.add_service(%Mdns.Server.Service{
     domain: "example7.local",
-    data: {172, 17, 0, 13},
-    ttl: 111,
+    data: {172, 18, 0, 11},
+    ttl: 64,
     type: :a
 })
