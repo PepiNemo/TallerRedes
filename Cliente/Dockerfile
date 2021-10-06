@@ -20,16 +20,15 @@ WORKDIR /tmp/multicast-dns
 RUN npm install 
 
 #Ejecutamos las consultas por dominio multicasT cuando se corra el contenedor.
-CMD node cli.js seba.local &&\
-node cli.js felipe.local && sleep 1s &&\
-node cli.js marcos.local && sleep 1s &&\
-node cli.js example1.local && sleep 1s &&\
-node cli.js example2.local && sleep 1s &&\
-node cli.js example3.local && sleep 1s &&\
-node cli.js example4.local && sleep 1s &&\
-node cli.js example5.local && sleep 1s &&\
-node cli.js example6.local && sleep 1s &&\
-node cli.js example7.local
+#Aproximado por 8 hrs
+CMD for i in $(seq 0 6400); \
+do \
+for j in seba.local felipe.local marcos.local example1.local example2.local example4.local example5.local example6.local example7.local; \
+do \
+node cli.js $j; \
+done; \
+done
+    
 
 #docker build -t cliente .
 #docker run --name cli --net=internet -it cliente
