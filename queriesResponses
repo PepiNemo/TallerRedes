@@ -1,0 +1,367 @@
+Running in IDS mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Initializing Preprocessors!
+Initializing Plug-ins!
+Parsing Rules file "/etc/snort/snort.conf"
+Tagged Packet Limit: 256
+Log directory = /var/log/snort
+Frag3 global config:
+    Max frags: 65536
+    Fragment memory cap: 4194304 bytes
+Frag3 engine config:
+    Bound Address: default
+    Target-based policy: WINDOWS
+    Fragment timeout: 60 seconds
+    Fragment min_ttl:   1
+    Fragment Anomalies: Alert
+    Overlap Limit:     0
+    Min fragment Length:     0
+      Max Expected Streams: 272
+Stream global config:
+    Track TCP sessions: ACTIVE
+    Max TCP sessions: 8192
+    TCP cache pruning timeout: 30 seconds
+    TCP cache nominal timeout: 3600 seconds
+    Memcap (for reassembly packet storage): 8388608
+    Track UDP sessions: ACTIVE
+    Max UDP sessions: 131072
+    UDP cache pruning timeout: 30 seconds
+    UDP cache nominal timeout: 180 seconds
+    Track ICMP sessions: INACTIVE
+    Track IP sessions: INACTIVE
+    Log info if session memory consumption exceeds 1048576
+    Send up to 0 active responses
+    Protocol Aware Flushing: ACTIVE
+        Maximum Flush Point: 16384
+WARNING: using static flush points.
+Stream TCP Policy config:
+    Bound Address: default
+    Reassembly Policy: FIRST
+    Timeout: 30 seconds
+    Maximum number of bytes to queue per session: 1048576
+    Maximum number of segs to queue per session: 2621
+    Options:
+        Static Flushpoint Sizes: YES
+    Reassembly Ports:
+Stream UDP Policy config:
+    Timeout: 30 seconds
+    Options:
+        Ignore Any -> Any Rules: YES
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+Initializing rule chains...
+1 Snort rules read
+    1 detection rules
+    0 decoder rules
+    0 preprocessor rules
+1 Option Chains linked into 1 Chain Headers
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-------------------[Rule Port Counts]---------------------------------------
+|             tcp     udp    icmp      ip
+|     src       0       0       0       0
+|     dst       0       1       0       0
+|     any       0       0       0       0
+|      nc       0       0       0       0
+|     s+d       0       0       0       0
++----------------------------------------------------------------------------
+
++-----------------------[detection-filter-config]------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[detection-filter-rules]-------------------------------
+| none
+-------------------------------------------------------------------------------
+
++-----------------------[rate-filter-config]-----------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[rate-filter-rules]------------------------------------
+| none
+-------------------------------------------------------------------------------
+
++-----------------------[event-filter-config]----------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[event-filter-global]----------------------------------
++-----------------------[event-filter-local]-----------------------------------
+| none
++-----------------------[suppression]------------------------------------------
+| none
+-------------------------------------------------------------------------------
+Rule application order: pass->drop->sdrop->reject->alert->log
+Verifying Preprocessor Configurations!
+
+[ Port Based Pattern Matching Memory ]
+pcap DAQ configured to read-file.
+Acquiring network traffic from "countQueriesResponses3.pcap".
+Reload thread starting...
+Reload thread started, thread 0x7f53d42dc700 (6247)
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.19 GRE (Build 85) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2021 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.9.1 (with TPACKET_V3)
+           Using PCRE version: 8.39 2016-06-14
+           Using ZLIB version: 1.2.11
+
+Commencing packet processing (pid=6242)
+===============================================================================
+Run time for packet processing was 1.284 seconds
+Snort processed 40 packets.
+Snort ran for 0 days 0 hours 0 minutes 1 seconds
+   Pkts/sec:           40
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       5390336
+  Bytes in mapped regions (hblkhd):      30265344
+  Total allocated space (uordblks):      4777472
+  Total free space (fordblks):           612864
+  Topmost releasable block (keepcost):   131328
+===============================================================================
+Packet I/O Totals:
+   Received:           40
+   Analyzed:           40 (100.000%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            0 (  0.000%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:            0 (  0.000%)
+       VLAN:            0 (  0.000%)
+        IP4:           40 (100.000%)
+       Frag:            0 (  0.000%)
+       ICMP:            0 (  0.000%)
+        UDP:           40 (100.000%)
+        TCP:            0 (  0.000%)
+        IP6:            0 (  0.000%)
+    IP6 Ext:            0 (  0.000%)
+   IP6 Opts:            0 (  0.000%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            0 (  0.000%)
+       UDP6:            0 (  0.000%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+      EAPOL:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:            0 (  0.000%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:            0 (  0.000%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:            0 (  0.000%)
+      Other:            0 (  0.000%)
+Bad Chk Sum:            0 (  0.000%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            0 (  0.000%)
+     S5 G 2:            0 (  0.000%)
+      Total:           40
+===============================================================================
+Action Stats:
+     Alerts:           16 ( 40.000%)
+     Logged:           16 ( 40.000%)
+     Passed:            0 (  0.000%)
+Limits:
+      Match:            0
+      Queue:            0
+        Log:            0
+      Event:            0
+      Alert:            0
+Verdicts:
+      Allow:           40 (100.000%)
+      Block:            0 (  0.000%)
+    Replace:            0 (  0.000%)
+  AllowFlow:            0 (  0.000%)
+  BlockFlow:            0 (  0.000%)
+     Ignore:            0 (  0.000%)
+      Retry:            0 (  0.000%)
+===============================================================================
+Frag3 statistics:
+        Total Fragments: 0
+      Frags Reassembled: 0
+               Discards: 0
+          Memory Faults: 0
+               Timeouts: 0
+               Overlaps: 0
+              Anomalies: 0
+                 Alerts: 0
+                  Drops: 0
+     FragTrackers Added: 0
+    FragTrackers Dumped: 0
+FragTrackers Auto Freed: 0
+    Frag Nodes Inserted: 0
+     Frag Nodes Deleted: 0
+===============================================================================
+===============================================================================
+Stream statistics:
+            Total sessions: 0
+              TCP sessions: 0
+       Active TCP sessions: 0
+  Non mempool TCP sess mem: 0
+          TCP mempool used: 0
+              UDP sessions: 0
+       Active UDP sessions: 0
+          UDP mempool used: 0
+             ICMP sessions: 0
+      Active ICMP sessions: 0
+         ICMP mempool used: 0
+               IP sessions: 0
+        Active IP sessions: 0
+           IP mempool used: 0
+                TCP Prunes: 0
+                UDP Prunes: 0
+               ICMP Prunes: 0
+                 IP Prunes: 0
+TCP StreamTrackers Created: 0
+TCP StreamTrackers Deleted: 0
+              TCP Timeouts: 0
+              TCP Overlaps: 0
+       TCP Segments Queued: 0
+     TCP Segments Released: 0
+       TCP Rebuilt Packets: 0
+         TCP Segments Used: 0
+              TCP Discards: 0
+                  TCP Gaps: 0
+      UDP Sessions Created: 0
+      UDP Sessions Deleted: 0
+              UDP Timeouts: 0
+              UDP Discards: 0
+     ICMP Dest unreachable: 0
+ ICMP Fragmentation needed: 0
+                    Events: 0
+           Internal Events: 0
+           TCP Port Filter
+                  Filtered: 0
+                 Inspected: 0
+                   Tracked: 0
+           UDP Port Filter
+                  Filtered: 0
+                 Inspected: 40
+                   Tracked: 0
+===============================================================================
+
+Memory Statistics of Frag3 on: Wed Dec  8 14:11:29 2021
+
+    Memory in use         : 0
+    prealloc nodes in use : 0
+
+
+Heap Statistics of frag:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              3
+                 No of frees:              3
+         Config Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              3
+                 No of frees:              3
+===============================================================================
+ Memory Statistics of Http Inspect on: Wed Dec  8 14:11:29 2021
+     Current active session          : 0    No of POST methods encountered  : 0    No of GET methods encountered   : 0    No of successfully extract post params      : 0    No of successfully extract request params   : 0    No of successfully extract response params  : 0 Http Memory Pool       :      Free Memory:                 0 bytes       Used Memory:                 0 bytes       Max Memory :                 0 bytes  Mime Decode Memory Pool   :      Free Memory:                 0 bytes      Used Memory:                 0 bytes      Max Memory :                 0 bytes Http Gzip Memory Pool     :      Free Memory:                 0 bytes      Used Memory:                 0 bytes      Max Memory :                 0 bytes Http Mime log Memory Pool :      Free Memory:                 0 bytes      Used Memory:                 0 bytes      Max Memory :                 0 bytes
+Heap Statistics of httpinspect:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              0
+                 No of frees:              0
+===============================================================================
+
+Memory Statistics of Stream on: Wed Dec  8 14:11:29 2021
+
+Stream Session Statistics:
+            Total sessions: 0
+              TCP sessions: 0
+       Active TCP sessions: 0
+              UDP sessions: 0
+       Active UDP sessions: 0
+             ICMP sessions: 0
+      Active ICMP sessions: 0
+               IP sessions: 0
+        Active IP sessions: 0
+   TCP Memory Pool:
+        Free Memory:                     0 bytes
+        Used Memory:                     0 bytes
+        Max Memory :                     0 bytes
+   UDP Memory Pool:
+        Free Memory:                     0 bytes
+        Used Memory:                     0 bytes
+        Max Memory :                     0 bytes
+   ICMP Memory Pool:
+        Free Memory:                     0 bytes
+        Used Memory:                     0 bytes
+        Max Memory :                     0 bytes
+   IP Memory Pool:
+        Free Memory:                     0 bytes
+        Used Memory:                     0 bytes
+        Max Memory :                     0 bytes
+   Session Flow Memory Pool:
+        Free Memory:                     0 bytes
+        Used Memory:                     0 bytes
+        Max Memory :                     0 bytes
+
+Heap Statistics of stream:
+          Total Statistics:
+               Memory in use:        2072952 bytes
+                No of allocs:             13
+                 No of frees:              9
+         Config Statistics:
+               Memory in use:        2072952 bytes
+                No of allocs:             13
+                 No of frees:              9
+===============================================================================
+
+Memory Statistics for File at:Wed Dec  8 14:11:29 2021
+
+Total buffers allocated:           0          
+Total buffers freed:               0          
+Total buffers released:            0          
+Total file mempool:                0          
+Total allocated file mempool:      0          
+Total freed file mempool:          0          
+Total released file mempool:       0          
+
+Heap Statistics of file:
+          Total Statistics:
+               Memory in use:              0 bytes
+                No of allocs:              0
+                 No of frees:              0
+===============================================================================
+Snort exiting
+12/08-14:06:17.912894  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:21.494797  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:25.077643  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:28.656709  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:32.257984  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:35.885162  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.2:5353 -> 224.0.0.251:5353
+12/08-14:06:57.394923  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:00.977892  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:04.554245  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:08.139575  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:11.720571  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:15.300196  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:18.883671  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:22.461144  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:26.043217  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353
+12/08-14:07:29.622989  [**] [1:5:0] Paquete con ambos contadores, de preguntas y respuestas, mayor a 0 [**] [Priority: 0] {UDP} 172.17.0.3:5353 -> 224.0.0.251:5353

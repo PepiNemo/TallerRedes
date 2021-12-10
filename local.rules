@@ -1,0 +1,5 @@
+#alert udp any any -> 224.0.0.251 5353 (content: "|00 00 00 00|"; msg:"Consulta con query count 0 ";offset:2;depth:4 ;sid:1;)
+
+#alert udp any any  -> 224.0.0.251 5353 (msg:"Se consulta o responde por una direccion no local" ;pcre:"/(http[s]?://){0,1}(w{3,3}.)[-a-z0-9+&@#/%?=~_!:,.]*[-a-z0-9+&@#/%=~_|]/"; sid:2;)
+
+alert udp !HOME_NET any  -> 224.0.0.251 5353 (msg:"Trafico anomalo proveniente fuera de local"; flow:from_client; sid:3;)
