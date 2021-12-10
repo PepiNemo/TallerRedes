@@ -1,8 +1,0 @@
-Comandos docker externos
-Para ver IP del contenedor :(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id)
-
-
-#Page 1
-#Page 20
-#Page 49
-#Page 52
